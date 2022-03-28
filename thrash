@@ -1,0 +1,295 @@
+
+  '''  def dog(a):
+    summ = 0
+    while a != 0:
+      b = a % 10
+      summ = summ + b
+      a = a // 10
+    print(summ)
+    sum1 = 0
+    while summ != 0:
+      c = summ % 10
+      sum1 = sum1 + c
+      summ = summ // 10
+    print(sum1)
+
+  dog(30071996)
+
+
+  def kok(a):
+    b = []
+    while a != 0:
+      c = a % 10
+      b.append(c)
+      a = a // 10
+      b.reverse()
+    print(sum(b))
+    с = 1
+    for i in b:
+      c *= i
+
+    print(c)
+
+
+  kok(2124)
+
+
+  '''    def bot(x):
+        a = []
+        while x > 0:
+            a.append(x % 10)
+            x //= 10
+        a.reverse()
+        b = a[::2]
+        print(b)
+    bot(123456)
+  '''
+
+
+
+
+  '''    def count(x,y):
+        a = x + 3 * x - 3 * y
+        print(a)
+    count(7,5)
+'''
+
+'''    def badik(x,y):
+        if x > y:
+            print('x больше')
+        elif x == y:
+            print('х равен у')
+        else:
+            print('y больше')
+    badik(7,9)
+'''
+
+'''  def func(x):
+    a = x * x + 2 * x - 3
+
+
+    return a
+
+  def odd(a):
+    c = []
+    while a != 0:
+      b = a % 10
+      if b % 2 == 0:
+        c.append(b)
+      a = a // 10
+    #print(c[::-1])
+    return c[::-1]
+
+ # print(odd(1468))
+
+  #02031999 -> 33 -> 6
+  def cat(a):
+    sum_ = 0
+    while a != 0:
+      c = a % 10
+      sum_ = c + sum_
+      a = a // 10
+    return sum_
+
+  r1 = cat(9999999)
+  r2 = cat(r1)
+  print(r2)
+'''
+
+
+
+'''
+  a = 324542678
+  
+
+
+    
+  #for i in reversed(c):
+  #  print(i, end=' ')
+  #c = reversed(c)
+  
+'''
+
+
+
+
+
+'''    a = 42896
+    b = 0
+    while(a > 0):
+        c = a % 10
+        b = (b * 10) + c
+        a = a // 10
+    print(b)
+'''
+
+'''    a = 1000
+    b = 0
+    c = 1
+    while(b < a):
+        print(b, end=' ')
+        i = b + c
+        b = c
+        c = i
+'''
+
+
+
+'''  inp = 2349
+  while(inp > 0):
+    res = inp % 10
+    inp = inp // 10
+
+    print(inp, res)
+
+  #9432 = 9*1000 + 4*100 + 3*10 + 2
+  #((9 * 10 + 4)*10 + 3)*10 + 2
+
+
+  lst_ = [9, 99, 3, 2]
+  a=0
+  for i in lst_:
+    a = a * 10 + i
+
+  cntr = 0
+  for i in lst_:
+    cntr += 1
+    if cntr % 2 == 0:
+      print(i)
+'''
+
+
+'''  a = 4
+  b = 0
+  c = 1
+  while(b < a):
+    i = b + c
+    b = c
+    c = i
+   print(b, end = ' ')
+'''
+
+
+
+
+
+'''  a = 3
+  for i in range(1, a + 1):
+    print(i * i * i)
+'''
+
+'''    a = 4
+    b = 1
+    for i in range(1, a + 1):
+        b = b * i
+    print(b)
+'''
+
+'''    a = 0
+    b = 1
+    print(a, b)
+    for i in range(10):
+
+        c = a + b
+        a = b
+        b = c
+
+        print(c, end = ' ')
+'''
+
+'''    a = 256789
+    b = 0
+    while (a != 0):
+        a = a // 10
+        b = b + 1
+
+    print(b)
+'''
+
+''' start = 25
+    end = 50
+
+    for i in range(start, end + 1):
+        if i > 1:
+            for j in range(2, i):
+                if (i % j) == 0:
+                    break
+            else:
+                print(i)
+'''
+
+'''    for i in range(5):
+        print(i)
+    else:
+        print('Done!')
+'''
+
+'''    for i in range(-10, 0):
+        print(i)
+'''
+
+'''    list1 = [10, 20, 30, 40, 50]
+    list2 = reversed(list1)
+    for i in list2:
+        print(i)
+'''
+
+''' a = 5
+    b = 5
+    for i in range(0, a + 1):
+        for j in range(b - i, 0, -1):
+            print(j, end=' ')
+        print()
+'''
+
+'''    numbers = [12, 75, 150, 180, 145, 525, 50]
+    for i in numbers:
+       if i > 500:
+           break
+       elif i > 150:
+           continue
+       elif i % 5 == 0:
+           print(i)
+'''
+
+'''    a = 5
+    for i in range(1, a + 1):
+        for j in range(1, i + 1):
+            print(j, end = ' ')
+        print()
+'''
+  
+
+
+
+
+'''  st = 2
+
+  sum_ = 0
+  i = 1
+  while(i <= st):
+    sum_ = sum_ + i
+    i += 1
+  print(sum_)
+'''
+
+
+
+
+
+
+
+
+
+
+'''lst_ = [2, 4, 1, 8]
+  for i in lst_:
+    #i = 2
+    for j in range(1, i + 1):
+      print(j, end = ' ')
+    print()
+  n = 1
+  for i in range(1, n + 1):
+    for j in range(1, i + 1):
+      print(j, end = ' ')
+    print()
