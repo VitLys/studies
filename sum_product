@@ -1,0 +1,17 @@
+  def sum_product(input_num):
+    lst_nums = []
+    sum_ = 0
+    product = 1
+    while input_num!= 0:
+      character = input_num % 10
+      sum_ = sum_ + character
+
+      input_num = input_num // 10
+
+
+      product *= character
+
+    return sum_, product
+  s, p = sum_product(123456)
+  print('Сумму равна', s)
+  print('Произведение равно', p)
