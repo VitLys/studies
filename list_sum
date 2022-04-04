@@ -1,0 +1,23 @@
+   # Input 1 number has at least 3 signes
+    # input 2 number 4 at least signes
+
+    #change first and last signes
+    x1 = int(input())
+    while x1 < 100:
+        x1 = int(input('Введите число, содержащее как минимум 3 знака \n'))
+
+    print(x1)
+    last_digit = x1 % 10
+    first_digit
+
+
+
+''' 
+    def list1(a):
+        sum_ = 0
+        for i in a:
+            sum_ += i
+        return sum_
+    res = list1([1, 2, 3])
+    print(res)
+'''
