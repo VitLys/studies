@@ -1,0 +1,14 @@
+
+    x1 = int(input('Введите первое число: '))
+    x2 = int(input('Введите второе число: '))
+    x3 = input('Введите действие: ')
+    if x3 == '+':
+        print(x1 + x2)
+    elif x3 == '*':
+        print(x1 * x2)
+    elif x3 == '-':
+        print(x1 - x2)
+    elif x3 == '/':
+        print(x1 // x2)
+    else:
+        print('error')
