@@ -1,0 +1,63 @@
+
+if __name__ == '__main__':
+    import random
+
+    '''    choise = input('Пользователь, за кого вы хотите играть? Введите x или o \n')
+    while choise != 'x' and choise != 'o':
+        choise = input('Пользователь, за кого вы хотите играть? Введите x или o \n')
+        print(choise)'''
+
+
+    def check_winner(field, turn):
+        if sum(field[turn // 3]) == 3:
+            return True
+        if field[0][turn % 3] + field[1][turn % 3] + field[2][turn % 3] == 3:
+            return True
+        if field[0][0] + field[1][1] + field[2][2] == 3:
+            return True
+        if field[0][2] + field[1][1] + field[2][0] == 3:
+            return True
+        return False
+
+
+    def show_one_row(row): # 0 - empty, 1 - x, -1 - o
+        print('|', end = '')
+        for i in row:
+            if i == 0:
+                empty = ' '
+            elif i == 1:
+                empty = 'x'
+            elif i == -1:
+                empty = 'o'
+            print(empty+'|', end = '')
+        print()
+        print(' - - - ')
+
+
+    field = [[0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0]
+            ]
+    for row in field:
+        show_one_row(row)
+
+    while True:
+        turn = int(input('Пользователь, в какую ячейку вы хотите поставить х?\n '))
+        turn = turn - 1
+        field[turn // 3][turn % 3] = 1
+
+        if check_winner(field, turn):
+            for row in field:
+                show_one_row(row)
+            print('Поздравляем!')
+            exit()
+
+        turn = random.randint(0, 9)
+        while field[turn // 3][turn % 3] != 0:
+            turn = random.randint(0, 9)
+        field[turn // 3][turn % 3] = -1
+        for row in field:
+            show_one_row(row)
+        if check_winner(field, turn):
+            print('Вы проиграли!')
+            exit()
