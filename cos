@@ -1,0 +1,32 @@
+
+    ''''# Input 1 number has at least 3 signes
+    # input 2 number 4 at least signes
+
+    # change first and last signes
+    x1 = int(input())
+    x2 = x1
+    while x1 < 100:
+        x1 = int(input('Введите число, содержащее как минимум 3 знака \n'))
+
+    print(x1)
+    last_digit = x1 % 10
+    n= 0
+    while (x1 > 0):
+        n += 1
+        first_digit = x1 % 10
+        x1 = x1 // 10
+    print(first_digit)
+    x2 = x2 - last_digit + first_digit
+    print(x2)'''
+
+    dict_drinks = {
+        'water': 20,
+        'cola': 40,
+        'juice': 30
+
+    }
+    count = 0
+    for i in dict_drinks:
+        count += dict_drinks[i]
+    print(count)
+
