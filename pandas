@@ -1,0 +1,124 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+
+if __name__ == '__main__':
+    df = pd.read_csv('weight-height.csv')
+    print(df['Gender'].value_counts())
+
+    df_male = df[df['Gender']=='Male']
+    df_female = df[df['Gender'] == 'Female']
+    print(df_male.shape)
+    print(df.head())
+    height = df['Height']
+    list1 = height.values.tolist()
+    srt_list1 = sorted(list1)
+    #print(list1)
+
+    cd = len(list1)
+    #print(cd)
+    a = 0
+    def mean_(lst):
+        sum_ = 0
+        for i in lst:
+            sum_ += i
+        mean = sum_ / len(lst)
+
+        return mean
+
+
+
+    for i in srt_list1:
+        a += i
+    mean = a / cd
+
+
+    print('Средний рост:', mean)
+
+    print('---', mean_(srt_list1))
+
+    #print(sorted(list1))
+    first_el = srt_list1[5000]
+    second_el = srt_list1[5001]
+    median = (first_el + second_el)/ 2
+    print('Медиана роста:', median)
+
+    #plt.hist(list1)
+    #plt.show()
+
+    weight = df['Weight']
+    list2 = weight.values.tolist()
+    srt_list2 = sorted(list2)
+    b = 0
+
+    def mean2_ (lst1):
+        sum_ = 0
+        for k in lst1:
+            sum_ += i
+        mean2 = sum_ / len(lst1)
+
+        return mean2
+
+
+    for j in srt_list2:
+        b += j
+    mean2 = b / cd
+    print('Средний вес:', mean2)
+
+    print('-----', mean2_(srt_list2))
+    first_el1 = srt_list2[5000]
+    second_el1 = srt_list2[5001]
+    median1 = (first_el1 + second_el1) / 2
+    print('Медиана веса:', median1)
+
+    male_height = df_male['Height']
+    srt_male_height = sorted(male_height)
+    cnt = len(srt_male_height)
+    c = 0
+    for k in srt_male_height:
+        c += k
+    mean3 = c / cnt
+    print('Средний рост мужчин:', mean3)
+
+    #plt.hist(male_height)
+    #plt.show()
+
+    female_height = df_female['Height']
+    srt_female_height = sorted(female_height)
+    cnt1 = len(srt_female_height)
+    d = 0
+    for l in srt_female_height:
+        d += l
+    mean4 = d / cnt1
+    print('Средний рост женщин:', mean4)
+
+    #plt.hist(female_height)
+    #plt.show()
+
+
+    qnt_5 = srt_list1[int(len(srt_list1)*0.05)]
+    print('Квантиль 5% роста генеральной совокупности:', qnt_5)
+    print('---', np.quantile(srt_list1, 0.05))
+    qnt_95 = srt_list1[9500]
+    print('Квантиль 95% роста генеральной совокупности:', qnt_95)
+
+    qnt1_5 = srt_list2[500]
+    print('Квантиль 5% веса генеральной совокупности:', qnt1_5)
+
+    qnt1_95 = srt_list2[9500]
+    print('Квантиль 95% веса генеральной совокупности:', qnt1_95)
+
+    female_min_height = min(df_female['Height'])
+    print('Минимальный рост женщин:', female_min_height)
+
+    female_max_height = max(df_female['Height'])
+    print('Максимальный рост женщин:', female_max_height)
+
+    male_min_height = min(df_male['Height'])
+    print('Минимальный рост мужчин:', male_min_height)
+
+    male_max_height = max(df_male['Height'])
+    print('Максимальный рост мужчин:', male_max_height)
+
