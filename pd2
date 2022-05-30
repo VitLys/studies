@@ -1,0 +1,35 @@
+import pandas as pd
+
+
+df = pd.read_csv('weight-height.csv')
+#print(df.shape)
+#print(len(df))
+#print(df.info())
+#print(type(df['Weight']))
+#print(type(df))
+df_weight = df['Weight']
+mean = df_weight.mean()
+#print(mean)
+dir_ = dir(df_weight)
+#print(dir_)
+#first_ = df_weight.first()
+#print(first_)
+lst = [1, 2, 4, 4]
+
+lst_ser = pd.Series(lst)
+print(lst_ser)
+mode_ = lst_ser.mode()
+print(mode_)
+print(type(mode_))
+
+#mode_ = lst.mode()
+#print(mode_)
+#mode_ = df_weight.mode()
+#print(mode_)
+
+
+#lst = [1, 2,3 ]
+
+#print(len(lst))
+#print(lst.pop())
+#print(st[l0])
