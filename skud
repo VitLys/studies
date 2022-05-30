@@ -1,0 +1,11 @@
+import pandas as pd
+pd.set_option('display.max_columns', None)
+
+if __name__ == '__main__':
+  data = pd.read_excel('Таможня СКУД 26.2.21.xlsx')
+  #print(data)
+  data1 = data[['Дата', 'Время', 'Фамилия']]
+  print(data1)
+  #data_time = data['Время']
+  #data_time_min = min(data_time)
+  #print(data_time_min)r
