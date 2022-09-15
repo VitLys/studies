@@ -1,2 +1,2 @@
 # studies
-#hello my nig
+#hello my friend
